@@ -1,10 +1,12 @@
-package cn.bblink.artnote.login;
+package cn.facewar.artnote.login;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+
+import cn.facewar.artnote.login.R;
 
 
 /** 登录界面

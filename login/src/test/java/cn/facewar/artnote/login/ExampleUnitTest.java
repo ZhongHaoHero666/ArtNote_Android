@@ -1,4 +1,4 @@
-package cn.bblink.artnote;
+package cn.facewar.artnote.login;
 
 import org.junit.Test;
 

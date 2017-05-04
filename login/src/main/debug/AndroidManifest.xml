@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="cn.bblink.artnote.login"
+          package="cn.facewar.artnote.login"
     >
 
     <application
