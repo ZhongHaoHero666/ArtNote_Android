@@ -14,8 +14,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //sun  test
-        //guo test
         TextView textView = (TextView) findViewById(R.id.start);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
