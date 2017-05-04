@@ -1,0 +1,93 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'android-apt'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        multiDexEnabled true
+        //ARouter配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+    buildTypes {
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+        }
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+        }
+    }
+}
+
+
+
+ext {
+    isLibrary = true
+    pomArtifactId = "Common"
+    pomDescription = "Common of android picker"
+}
+
+dependencies {
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:recyclerview-v7:' + rootProject.ext.SupportXVersion
+    compile 'com.android.support:support-annotations:' + rootProject.ext.SupportXVersion
+    compile 'com.android.support:design:' + rootProject.ext.SupportXVersion
+    compile 'com.android.support:cardview-v7:' + rootProject.ext.SupportXVersion
+    compile 'com.android.support:appcompat-v7:' + rootProject.ext.SupportXVersion
+    //retrofit和rxjava
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta3'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+    compile 'io.reactivex:rxjava:1.0.1'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+    //分包
+    compile 'com.android.support:multidex:1.0.0'
+    //图片缩放
+    compile 'com.commit451:PhotoView:1.2.4'
+    //打印日志
+    compile 'com.orhanobut:logger:1.13'
+    //显示图片框架
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    //view注解
+    compile 'com.jakewharton:butterknife:8.5.1'
+    apt 'com.jakewharton:butterknife-compiler:8.5.1'
+    //悬浮动画菜单
+    compile 'com.github.clans:fab:1.6.4'
+    //选择器NumberPicker
+    compile 'cn.carbswang.android:NumberPickerView:1.0.2'
+    //友盟统计
+    //    compile 'com.umeng.analytics:analytics:latest.integration'
+    //高德地图定位
+    compile files('libs/AMap_Location_V2.4.1_20160414.jar')
+    //支付宝
+//    compile files('libs/alipaySdk-20160516.jar')
+    //第三方库加固Shared Preferences
+    compile 'com.scottyab:secure-preferences-lib:0.1.4'
+    //Arouter 路由
+    compile 'com.alibaba:arouter-api:1.0.7'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.0.3'
+    //推送
+    //芝麻信用认证
+//    compile files('libs/zmxySDKALCmini_V1.01450366738902_release.jar')
+    //分割editext
+    compile 'com.xw.repo:xedittext:1.0.6@aar'
+    compile files('libs/bolts-tasks-1.4.0.jar')
+    //Android6.0权限库
+    compile 'pub.devrel:easypermissions:0.3.0'
+    compile files('libs/parse-android-1.13.0.jar')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+}
+

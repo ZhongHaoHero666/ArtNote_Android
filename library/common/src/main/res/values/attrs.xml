@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--昼夜模式主色调-->
+    <attr name="dayNightBackground" format="color|reference" />
+    <attr name="dayNightOneTextColor" format="color|reference" />
+    <attr name="dayNightTwoTextColor" format="color|reference" />
+    <attr name="dayNightThreeTextColor" format="color|reference" />
+    <attr name="dayNightBackgroundDrawable" format="color|reference" />
+
+    <declare-styleable name="DayNightMode">
+        <attr name="dayNightBackgroundAttr" format="string|reference" /><!--切换背景属性-->
+        <attr name="dayNightOneTextColorAttr" format="string|reference" /><!--切换一级字体颜色属性-->
+        <attr name="dayNightTwoTextColorAttr" format="string|reference" /><!--切换二级字体颜色属性-->
+        <attr name="dayNightThreeTextColorAttr" format="string|reference" /><!--切换三级字体颜色属性-->
+        <attr name="dayNightBackgroundDrawableAttr" format="string|reference" /><!--切换背景图片属性-->
+    </declare-styleable>
+    <declare-styleable name="RatingBar">
+        <!--星星间距-->
+        <attr name="starDistance" format="dimension" />
+        <!--星星大小-->
+        <attr name="starSize" format="dimension" />
+        <!--星星个数-->
+        <attr name="starCount" format="integer" />
+        <!--星星空图-->
+        <attr name="starEmpty" format="reference" />
+        <!--星星满图-->
+        <attr name="starFill" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="CityPickerView">
+        <attr name="citypicker_title_background" format="color"></attr><!--标题背景颜色-->
+        <attr name="citypicker_text_confirm_color" format="color"></attr><!--确认文字的颜色-->
+        <attr name="citypicker_text_cancel_color" format="color"></attr><!--取消文字的颜色-->
+        <attr name="citypicker_wheel_color" format="color"></attr><!--滚轮的颜色-->
+        <attr name="citypicker_wheel_text_color" format="color"></attr><!--滚轮里面内容的文字颜色-->
+        <attr name="citypicker_wheel_text_size" format="dimension"></attr><!--滚轮里面内容的文字大小-->
+        <attr name="citypicker_title_text_size" format="dimension"></attr><!--标题的文字大小-->
+        <attr name="citypicker_title_action_size" format="dimension"></attr><!--确认和取消的文字大小-->
+    </declare-styleable>
+</resources>
