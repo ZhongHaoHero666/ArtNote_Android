@@ -77,8 +77,8 @@ dependencies {
     //第三方库加固Shared Preferences
     compile 'com.scottyab:secure-preferences-lib:0.1.4'
     //Arouter 路由
-    compile 'com.alibaba:arouter-api:1.0.7'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.0.3'
+    compile 'com.alibaba:arouter-api:1.2.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.2'
     //推送
     //芝麻信用认证
 //    compile files('libs/zmxySDKALCmini_V1.01450366738902_release.jar')
