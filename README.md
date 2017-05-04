@@ -3,10 +3,11 @@
 文艺笔记android备忘录
 
 
-###接口mock工具 apizza
+###1.接口mock工具 apizza
 
     http://apizza.cc/console/project/0a793559e396958a0fd6e298e583229a/dev
-###新建组件的流程
+###2.新建组件的流程
+
     1.新建一个module
     2.在module的main文件夹下新建两个文件夹debug和release,用于放置Debug和Release环境的Manifest文件
     3.在新的module的gradle中加入两个判断
@@ -34,6 +35,8 @@
         //即在你的module下的资源文件最好都加入这个前缀
        
 ######Module是否能单独运行的开发在gradle.properties中
+
+#####ARouter使用可以参考MainActivity和LoginActivity , 有关ARouter的使用及文档见https://github.com/alibaba/ARouter
 原型工具 墨刀
 
 
