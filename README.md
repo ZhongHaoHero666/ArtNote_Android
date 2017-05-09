@@ -5,8 +5,17 @@
 
 ###接口mock工具 apizza
 
-    http://apizza.cc/console/project/0a793559e396958a0fd6e298e583229a/dev
+    http://apizza.cc/console/project/0a793559e396958a0fd6e298e583229a/dev
+    
+####文档工具的域名需要根据上下班时间进行更换
 
+
+###域名映射工具花生壳
+    工作时间（10：00-18：00）域名：17t14b6937.51mypc.cn:11744
+    休息时间（19：00-23：00）域名：17t14b6937.51mypc.cn:38211
+
+##原型工具 墨刀
+    原型连接：//TODO @锅大侠
 
 ##新建组件的流程
     1.新建一个module
@@ -36,9 +45,5 @@
         //即在你的module下的资源文件最好都加入这个前缀
        
 ######Module是否能单独运行的开发在gradle.properties中
-
-
-##原型工具 墨刀
-
 
 ##交流qq群：637588525
