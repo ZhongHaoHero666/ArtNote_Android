@@ -15,6 +15,7 @@ import rx.schedulers.Schedulers;
  * Created by xsf
  * on 2016.09.9:59
  */
+
 /**************使用例子******************/
 /*_apiService.login(mobile, verifyCode)
         .compose(RxSchedulersHelper.io_main())
@@ -37,10 +38,9 @@ public class RxHelper {
                     public Observable<T> call(BaseRespose<T> result) {
                         LogUtils.logd("result from api : " + result);
                         if (result.success()) {
-                            return createData(result.result);
+                            return createData(result.getData());
                         } else {
-                            ToastUitl.showShort("失败呀");
-                            return Observable.error(new ServerException(result.getMsg()));
+                            return Observable.error(new ServerException(result.getState()));
                         }
                     }
                 }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());

@@ -7,7 +7,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         >
-        <activity android:name="DebugResource.DebugLoginActivity">
+        <activity android:name="cn.facewar.artnote.ui.activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

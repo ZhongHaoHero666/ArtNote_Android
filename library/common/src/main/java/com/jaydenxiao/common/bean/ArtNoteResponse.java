@@ -1,15 +1,17 @@
-package com.jaydenxiao.common.basebean;
-
-import java.io.Serializable;
-import java.util.List;
+package com.jaydenxiao.common.bean;
 
 /**
- * des:封装服务器返回数据
- * Created by xsf
- * on 2016.09.9:47
+ * Created by Chen on 2017/5/9.
  */
-public class BaseRespose <T> implements Serializable {
 
+public class ArtNoteResponse<T> {
+
+
+    /**
+     * code : 0
+     * state : 登录成功
+     * data : {"userId":"7847","realName":null,"sex":null,"mobile":"10000000000"}
+     */
 
     private int code;
     private String state;
@@ -37,9 +39,5 @@ public class BaseRespose <T> implements Serializable {
 
     public void setState(String state) {
         this.state = state;
-    }
-
-    public boolean success() { // 0 服务器表示成功
-        return "0".equals(state);
     }
 }
