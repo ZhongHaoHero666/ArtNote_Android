@@ -1,4 +1,4 @@
-package DebugResource;
+package cn.facewar.artnote.ui.activity;
 
 import android.widget.Button;
 
@@ -6,25 +6,24 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.jaydenxiao.common.base.BaseActivity;
 import com.jaydenxiao.common.bean.LoginBean;
 
+import cn.facewar.artnote.ui.contract.LoginContract;
+import cn.facewar.artnote.ui.model.LoginModel;
+import cn.facewar.artnote.ui.presenter.LoginPresenter;
 import butterknife.BindView;
 import butterknife.OnClick;
 import cn.facewar.artnote.login.R;
 import cn.facewar.artnote.login.R2;
-import cn.facewar.artnote.ui.contract.LoginContract;
-import cn.facewar.artnote.ui.model.LoginModel;
-import cn.facewar.artnote.ui.presenter.LoginPresenter;
 
 
 /**
  * Created by RXPC-D252 on 2017/5/4.
  */
-
 /** 登录界面
  * Created by RXPC-D252 on 2017/5/4.
  */
 //路由跳转
 @Route(path = "/login/loginActivity")
-public class DebugLoginActivity extends BaseActivity<LoginPresenter, LoginModel> implements LoginContract.View {
+public class LoginActivity extends BaseActivity<LoginPresenter, LoginModel> implements LoginContract.View {
 
     @BindView(R2.id.login)
     Button login;

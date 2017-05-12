@@ -25,10 +25,10 @@ public class RxResultHepler {
                         new Func1<BaseRespose<T>, Observable<T>>() {
                             @Override
                             public Observable<T> call(BaseRespose<T> result) {
-                                if (result.isSuccess()) {
-                                    return createData(result.result);
+                                if (result.success()) {
+                                    return createData(result.getData());
                                 } else {
-                                    return Observable.error(new ServerException(result.getMsg()));
+                                    return Observable.error(new ServerException(result.getState()));
                                 }
                             }
                         }

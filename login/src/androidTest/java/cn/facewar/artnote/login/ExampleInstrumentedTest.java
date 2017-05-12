@@ -1,4 +1,4 @@
-package cn.bblink.artnote;
+package cn.facewar.artnote.login;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("cn.bblink.artnote", appContext.getPackageName());
+        assertEquals("cn.facewar.artnote.login.test", appContext.getPackageName());
     }
 }

@@ -11,7 +11,8 @@ public class ApiConstants {
     }
 
     //正式
-    public static final String ONLINE_HOST = "https://api.yifenzhiyi.com/";
+    public static final String ONLINE_HOST = "http://17t14b6937.51mypc.cn:11744"; // 公司
+//    public static final String ONLINE_HOST = "http://17t14b6937.51mypc.cn:38211"; // 家里
     //测试环境
     public static final String TEST_HOST = "http://fix1.renxincloud.com/";
 
