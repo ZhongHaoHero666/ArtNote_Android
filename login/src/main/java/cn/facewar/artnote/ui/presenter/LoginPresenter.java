@@ -1,7 +1,6 @@
 package cn.facewar.artnote.ui.presenter;
 
 import com.jaydenxiao.common.baserx.RxSubscriber;
-import com.jaydenxiao.common.bean.ArtNoteResponse;
 import com.jaydenxiao.common.bean.LoginBean;
 
 import cn.facewar.artnote.ui.contract.LoginContract;
@@ -16,7 +15,7 @@ public class LoginPresenter extends LoginContract.Presenter {
         mRxManage.add(mModel.getLogin(mobile,passWord,IMeiId).subscribe(new RxSubscriber<LoginBean>(mContext,"正在登陆",true) {
             @Override
             protected void _onNext(LoginBean response) {
-                    mView.loginSuccess(response);
+                mView.loginSuccess(response);
             }
 
             @Override

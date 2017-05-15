@@ -62,7 +62,7 @@ public abstract class BaseActivity<T extends BasePresenter, E extends BaseModel>
         // 设置竖屏
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         // 默认着色状态栏
-        SetStatusBarColor();
+//        SetStatusBarColor();
 
     }
 

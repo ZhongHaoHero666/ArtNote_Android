@@ -1,2 +1,2 @@
-include ':app', ':login'
+include ':app', ':login', ':homepage'
 include ':library:common'
