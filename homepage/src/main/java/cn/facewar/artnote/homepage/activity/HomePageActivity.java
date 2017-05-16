@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.jaeger.library.StatusBarUtil;
 import com.jaydenxiao.common.base.BaseActivity;
 
 import cn.facewar.artnote.homepage.R;
@@ -55,6 +56,8 @@ public class HomePageActivity extends BaseActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        // 沉浸式状态栏
+        StatusBarUtil.setColorForDrawerLayout(this,drawer,getResources().getColor(R.color.colorPrimary),1);
     }
 
 

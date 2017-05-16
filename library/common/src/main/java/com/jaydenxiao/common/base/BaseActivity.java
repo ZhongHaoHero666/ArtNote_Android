@@ -9,6 +9,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
+import com.jaeger.library.StatusBarUtil;
 import com.jaydenxiao.common.R;
 import com.jaydenxiao.common.baseapp.AppManager;
 import com.jaydenxiao.common.baserx.RxManager;
@@ -63,7 +64,7 @@ public abstract class BaseActivity<T extends BasePresenter, E extends BaseModel>
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         // 默认着色状态栏
 //        SetStatusBarColor();
-
+        StatusBarUtil.setColor(this,getResources().getColor(R.color.colorPrimary),1);
     }
 
     /*********************

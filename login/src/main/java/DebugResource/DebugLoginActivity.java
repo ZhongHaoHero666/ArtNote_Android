@@ -26,8 +26,6 @@ import cn.facewar.artnote.ui.presenter.LoginPresenter;
 @Route(path = "/login/loginActivity")
 public class DebugLoginActivity extends BaseActivity<LoginPresenter, LoginModel> implements LoginContract.View {
 
-    @BindView(R2.id.login)
-    Button login;
 
     @Override
     public int getLayoutId() {
@@ -67,10 +65,5 @@ public class DebugLoginActivity extends BaseActivity<LoginPresenter, LoginModel>
     @Override
     public void showErrorTip(String msg) {
         showShortToast(msg);
-    }
-
-    @OnClick(R2.id.login)
-    public void onViewClicked() {
-        mPresenter.loginUser("10000000000","123","awefawegawegawergaewgafea");
     }
 }
