@@ -89,5 +89,6 @@ dependencies {
     compile 'pub.devrel:easypermissions:0.3.0'
     compile files('libs/parse-android-1.13.0.jar')
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.jaeger.statusbarutil:library:1.4.0' // 沉浸式状态栏
 }
 

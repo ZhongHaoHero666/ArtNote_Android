@@ -1,13 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    <Button
-        android:id="@+id/login"
+    android:background="@drawable/login_bg"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
+        android:background="#4D000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="登录"
-        />
-</LinearLayout>
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/phone_et"
+            android:textSize="16sp"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_et"
+            android:hint="手机号"
+            android:paddingLeft="10dp"
+            android:textColorHint="#919090" />
+
+        <EditText
+            android:id="@+id/password_et"
+            android:textSize="16sp"
+            android:layout_marginTop="30dp"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_et"
+            android:hint="密码"
+            android:paddingLeft="10dp"
+            android:textColorHint="#919090" />
+
+        <TextView
+            android:textColor="#BBBBBB"
+            android:id="@+id/forget_pw_tv"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="right"
+            android:text="忘记密码?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/register_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_btn"
+                android:paddingLeft="20dp"
+                android:textSize="16sp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="注册"
+                android:textColor="@color/white" />
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="1dp"></View>
+            <Button
+                android:id="@+id/login_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_btn"
+                android:paddingLeft="20dp"
+                android:textSize="16sp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="登陆"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#BBBBBB"
+                android:layout_height="1dp"/>
+            <TextView
+                android:textColor="#BBBBBB"
+                android:textSize="14sp"
+                android:padding="5dp"
+                android:text="其他登陆方式"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#BBBBBB"
+                android:layout_height="1dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ssdk_oks_classic_wechat" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ssdk_oks_classic_qq" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/details_microblog" />
+        </RelativeLayout>
+    </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

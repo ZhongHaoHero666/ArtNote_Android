@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FE9933</color>
+    <color name="colorPrimary">#40B1E3</color>
     <color name="colorPrimaryDark">#FA7C20</color>
     <color name="colorAccent">#FA7C20</color>
     <!--文字颜色-->
@@ -120,6 +120,8 @@
     <color name="alpha_85_black">#D9000000</color>
     <color name="alpha_90_black">#E6000000</color>
     <color name="alpha_95_black">#F2000000</color>
+    <color name="color_bbb">#BBBBBB</color>
+    <color name="color_919">#919090</color>
 
 
 </resources>
