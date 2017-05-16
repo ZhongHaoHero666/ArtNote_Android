@@ -16,12 +16,9 @@ import com.jaydenxiao.common.base.BaseActivity;
 import cn.facewar.artnote.homepage.R;
 
 
-public class HomePageActivity extends BaseActivity
-    implements NavigationView.OnNavigationItemSelectedListener  {
-
+public class HomePageActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener  {
 
     private CharSequence mTitle;
-
 
     @Override
     public int getLayoutId() {
