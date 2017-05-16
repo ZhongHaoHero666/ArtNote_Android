@@ -112,7 +112,7 @@
             <View
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:background="#919090"
+                android:background="#BBBBBB"
                 android:layout_height="1dp"/>
         </LinearLayout>
 
