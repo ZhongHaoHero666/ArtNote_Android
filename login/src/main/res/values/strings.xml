@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">login</string>
+    <string name="title_activity_register">RegisterActivity</string>
+
+    <string name="login_register_phone_hint">请输入手机号</string>
+    <string name="login_register_pwd_hint">设置登录密码,不少于6位</string>
+    <string name="login_register_vercode_hint">请输入4位验证码</string>
+    <string name="login_bt_next">注册</string>
 </resources>

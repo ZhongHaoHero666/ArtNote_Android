@@ -1,4 +1,4 @@
-package com.jaydenxiao.common.bean;
+package com.jaydenxiao.common.bean.login;
 
 /**
  * Created by Chen on 2017/5/9.
@@ -14,8 +14,8 @@ public class LoginBean {
      */
 
     private String userId;
-    private Object realName;
-    private Object sex;
+    private String realName;
+    private String sex;
     private String mobile;
 
     public String getUserId() {
@@ -26,19 +26,19 @@ public class LoginBean {
         this.userId = userId;
     }
 
-    public Object getRealName() {
+    public String getRealName() {
         return realName;
     }
 
-    public void setRealName(Object realName) {
+    public void setRealName(String realName) {
         this.realName = realName;
     }
 
-    public Object getSex() {
+    public String getSex() {
         return sex;
     }
 
-    public void setSex(Object sex) {
+    public void setSex(String sex) {
         this.sex = sex;
     }
 

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <com.jaydenxiao.common.commonwidget.CommonToolBarHelper
+        android:id="@+id/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/et_phone"
+        android:textSize="16sp"
+        android:textColorHint="@color/alpha_45_black"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="5dp"
+        android:drawableStart="@drawable/cellphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="@string/login_register_phone_hint"
+        android:hint="@string/login_register_phone_hint"
+        />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/et_verCode"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/verifycode"
+            android:textColorHint="@color/alpha_45_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/login_register_vercode_hint"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="@string/login_register_vercode_hint"
+            />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/et_pwd"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:drawablePadding="5dp"
+        android:drawableStart="@drawable/password_lock"
+        android:textColorHint="@color/alpha_45_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/login_register_pwd_hint"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelText="@string/login_register_pwd_hint"
+        />
+
+    <Button
+        android:id="@+id/bt_next"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/login_bt_next"
+        android:background="@drawable/drawable_btn_maincolor_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

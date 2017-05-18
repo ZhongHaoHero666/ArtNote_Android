@@ -3,8 +3,7 @@ package cn.facewar.artnote.ui.contract;
 import com.jaydenxiao.common.base.BaseModel;
 import com.jaydenxiao.common.base.BasePresenter;
 import com.jaydenxiao.common.base.BaseView;
-import com.jaydenxiao.common.bean.ArtNoteResponse;
-import com.jaydenxiao.common.bean.LoginBean;
+import com.jaydenxiao.common.bean.login.LoginBean;
 
 import rx.Observable;
 
@@ -16,6 +15,7 @@ public interface LoginContract {
 
     interface Model extends BaseModel {
         Observable<LoginBean> getLogin(String mobile, String passWord,String IMeiId);
+
     }
 
     interface View extends BaseView {
@@ -24,8 +24,10 @@ public interface LoginContract {
         void loginFail(String msg);
     }
 
-    abstract static class Presenter extends BasePresenter<View, Model> {
+    abstract  class Presenter extends BasePresenter<View, Model> {
         //发起登陆请求
-        public abstract void loginUser(String mobile, String passWord,String IMeiId);
+        public abstract void loginUser(String mobile, String passWord);
+
+        public abstract boolean checkBeforeLogin(String mobile, String passWord);
     }
 }

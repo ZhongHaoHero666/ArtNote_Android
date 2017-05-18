@@ -11,14 +11,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.jaeger.library.StatusBarUtil;
 import com.jaydenxiao.common.base.BaseActivity;
+import com.jaydenxiao.common.baseapp.AppManager;
+import com.jaydenxiao.common.baseapp.BaseApplication;
+import com.jaydenxiao.common.commonutils.LocationUtils;
+import com.jaydenxiao.common.commonutils.ToastUitl;
 
 import cn.facewar.artnote.homepage.R;
 
-
+@Route(path = "/homepage/HomePageActivity")
 public class HomePageActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener  {
-
     private CharSequence mTitle;
 
     @Override
@@ -57,7 +61,7 @@ public class HomePageActivity extends BaseActivity implements NavigationView.OnN
         StatusBarUtil.setColorForDrawerLayout(this,drawer,getResources().getColor(R.color.colorPrimary),1);
     }
 
-
+    long exitTime = 0;
 
     @Override
     public void onBackPressed() {
@@ -65,7 +69,16 @@ public class HomePageActivity extends BaseActivity implements NavigationView.OnN
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+//            super.onBackPressed();
+            if ((System.currentTimeMillis() - exitTime) > 2000) {
+                ToastUitl.showShort("再按一次退出程序");
+                exitTime = System.currentTimeMillis();
+            } else {
+                //销毁定位
+                LocationUtils.destroy();
+                //关闭所有Activity
+                AppManager.getAppManager().AppExit(BaseApplication.getAppContext(), false);
+            }
         }
     }
 

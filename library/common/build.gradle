@@ -10,6 +10,7 @@ android {
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
         multiDexEnabled true
+
         //ARouter配置
         javaCompileOptions {
             annotationProcessorOptions {
@@ -77,8 +78,8 @@ dependencies {
     //第三方库加固Shared Preferences
     compile 'com.scottyab:secure-preferences-lib:0.1.4'
     //Arouter 路由
-    compile 'com.alibaba:arouter-api:1.2.1'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.1.2'
+    compile 'com.alibaba:arouter-api:1.2.1.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.2.1'
     //推送
     //芝麻信用认证
 //    compile files('libs/zmxySDKALCmini_V1.01450366738902_release.jar')
@@ -90,5 +91,7 @@ dependencies {
     compile files('libs/parse-android-1.13.0.jar')
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.jaeger.statusbarutil:library:1.4.0' // 沉浸式状态栏
+    //MD风格输入框
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
 }
 

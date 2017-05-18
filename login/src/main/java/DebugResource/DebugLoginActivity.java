@@ -1,15 +1,10 @@
 package DebugResource;
 
-import android.widget.Button;
-
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.jaydenxiao.common.base.BaseActivity;
-import com.jaydenxiao.common.bean.LoginBean;
+import com.jaydenxiao.common.bean.login.LoginBean;
 
-import butterknife.BindView;
-import butterknife.OnClick;
 import cn.facewar.artnote.login.R;
-import cn.facewar.artnote.login.R2;
 import cn.facewar.artnote.ui.contract.LoginContract;
 import cn.facewar.artnote.ui.model.LoginModel;
 import cn.facewar.artnote.ui.presenter.LoginPresenter;

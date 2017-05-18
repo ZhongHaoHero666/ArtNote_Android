@@ -29,6 +29,13 @@ public class AppConstant   {
     //跳转Web 标题
     public static final String WEBVIEW_TITLE = "webViewTitle";
 
+    /**
+     * SP文件的Key
+     */
+    public static final String LOGIN_STATUS = "loginStatus";
 
 
+    /**
+     * RxBus的Key
+     */
 }

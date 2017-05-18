@@ -8,6 +8,7 @@
         android:supportsRtl="true"
         >
         <activity android:name="cn.facewar.artnote.ui.activity.LoginActivity"/>
+        <activity android:name="cn.facewar.artnote.ui.activity.RegisterActivity"/>
     </application>
 
 </manifest>

@@ -1,15 +1,13 @@
 package com.jaydenxiao.common.api;
 
 import com.jaydenxiao.common.basebean.BaseRespose;
-import com.jaydenxiao.common.bean.ArtNoteResponse;
-import com.jaydenxiao.common.bean.LoginBean;
+import com.jaydenxiao.common.bean.login.LoginBean;
+import com.jaydenxiao.common.bean.login.RegisterResponse;
 
 import okhttp3.ResponseBody;
-import retrofit2.http.Field;
-import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
-import retrofit2.http.POST;
+import retrofit2.http.Query;
 import retrofit2.http.Streaming;
 import retrofit2.http.Url;
 import rx.Observable;
@@ -36,12 +34,20 @@ public interface ApiService {
      * @param IMeiId    设备ID
      * @return
      */
-    @FormUrlEncoded
-    @POST("User/register")
+    @GET("User/login")
     Observable<BaseRespose<LoginBean>> login(
             @Header("Cache-Control") String cacheControl,
-            @Field("mobile") String mobile,
-            @Field("password") String password,
-            @Field("IMeiId") String IMeiId
+            @Query("mobile") String mobile,
+            @Query("password") String password,
+            @Query("IMeiId") String IMeiId
+    );
+
+    @GET("User/register")
+    Observable<BaseRespose<RegisterResponse>> register(
+        @Header("Cache-Control") String cacheControl,
+        @Query("userName") String userName,
+        @Query("password") String password,
+        @Query("mobile") String mobile,
+        @Query("verificationCode") String verificationCode
     );
 }

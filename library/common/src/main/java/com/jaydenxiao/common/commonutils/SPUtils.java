@@ -8,6 +8,7 @@ import com.securepreferences.SecurePreferences;
 
 /**
  * 对SharedPreference文件中的各种类型的数据进行存取操作
+ *  该类中的存 均为异步操作
  */
 public class SPUtils {
     private static SharedPreferences sp;
@@ -47,7 +48,7 @@ public class SPUtils {
         if (sp == null) {
             init();
         }
-        sp.edit().putInt(key, value).commit();
+        sp.edit().putInt(key, value).apply();
     }
 
     public static int getSharedIntData(String key) {
@@ -61,7 +62,7 @@ public class SPUtils {
         if (sp == null) {
             init();
         }
-        sp.edit().putLong(key, value).commit();
+        sp.edit().putLong(key, value).apply();
     }
 
     public static long getSharedlongData(String key) {
@@ -76,7 +77,7 @@ public class SPUtils {
         if (sp == null) {
             init();
         }
-        sp.edit().putFloat(key, value).commit();
+        sp.edit().putFloat(key, value).apply();
     }
 
     public static Float getSharedFloatData(String key) {
@@ -91,7 +92,7 @@ public class SPUtils {
         if (sp == null) {
             init();
         }
-        sp.edit().putBoolean(key, value).commit();
+        sp.edit().putBoolean(key, value).apply();
     }
 
     public static Boolean getSharedBooleanData(String key) {
@@ -105,7 +106,7 @@ public class SPUtils {
         if (sp == null) {
             init();
         }
-        sp.edit().putString(key, value).commit();
+        sp.edit().putString(key, value).apply();
     }
 
     public static String getSharedStringData(String key) {
