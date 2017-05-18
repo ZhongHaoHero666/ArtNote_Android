@@ -56,5 +56,4 @@ public class LoginPresenter extends LoginContract.Presenter {
             return false;
         }
     }
-
 }
